@@ -1,0 +1,46 @@
+{
+  "name": "benignware/wc-test-payment",
+  "version": "0.0.1",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "Very simple plugin to test WooCommerce payments",
+  "homepage": "http://github.com/benignware-labs/wc-test-payments",
+  "authors": [
+    {
+      "name": "Rafael Nowrotek",
+      "email": "mail@benignware.com",
+      "homepage": "https://github.com/benignware"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "wordpress-plugin",
+    "woocommerce"
+  ],
+  "support": {
+    "issues": "https://github.com/benignware-labs/wc-test-payments/issues"
+  },
+  "repositories": [{
+    "type": "composer",
+    "url": "https://wpackagist.org"
+  }],
+  "require": {
+    "php": ">=5.3.0",
+    "composer/installers": "~1.0"
+  },
+  "extra": {
+    "webroot-dir": "wp-core",
+  	"webroot-package": "wordpress",
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "wp-content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  }
+}
